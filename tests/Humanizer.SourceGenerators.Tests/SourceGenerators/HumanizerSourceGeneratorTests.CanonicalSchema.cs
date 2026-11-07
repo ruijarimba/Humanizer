@@ -1144,10 +1144,7 @@ public static class CompiledUnicodeComparerHarness
                     cancellationToken: cancellationToken)
             ],
             GetMetadataReferences(),
-            new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
-                .WithCryptoKeyFile(
-                    Path.Combine(FindRepositoryRoot(), "Humanizer.snk"))
-                .WithPublicSign(true));
+            new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
         using var assemblyStream = new MemoryStream();
         var emitResult = compilation.Emit(
             assemblyStream,
@@ -1983,10 +1980,7 @@ public static class CompiledInvariantHarness
                     cancellationToken: cancellationToken)
             ],
             GetMetadataReferences(),
-            new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
-                .WithCryptoKeyFile(
-                    Path.Combine(FindRepositoryRoot(), "Humanizer.snk"))
-                .WithPublicSign(true));
+            new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
         using var assemblyStream = new MemoryStream();
         var emitResult = compilation.Emit(
             assemblyStream,

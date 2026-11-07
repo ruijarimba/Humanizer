@@ -101,7 +101,7 @@ Conditional compilation (`#if`) handles API differences across targets. The `Pol
 ## Build & Packaging
 
 - **Versioning**: Nerdbank.GitVersioning (`version.json`) generates SemVer2 versions from git height
-- **Strong naming**: Assembly signed with `Humanizer.snk`
+- **Strong naming**: Disabled in this sanitized checkout; assemblies are unsigned and have a different identity from strong-named releases. Previously compiled consumers may require rebuilding.
 - **Central package management**: `Directory.Packages.props` pins all dependency versions
 - **NuGet packaging**: Multi-locale `.nuspec` files generate language-specific satellite packages
 - **Code signing**: Azure Key Vault signing in CI for released packages
