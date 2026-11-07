@@ -109,20 +109,6 @@ src/Humanizer.Tests/ApiApprover/PublicApiApprovalTest.approve_public_api.receive
 # BenchmarkDotNet artifacts
 **/BenchmarkDotNet.Artifacts/
 
-# Clairvoyance workspace knowledge (machine-specific)
-.clairvoyance/
-.Clairvoyance/
-
-# Ralph autonomous agent logs
-scripts/ralph/logs/
-
-# Local agent workspace artifacts
-/.worktrees/
-/prompt-exports/
-
-# Claude session lock files (machine-specific)
-/.claude/*.lock
-
 artifacts/
 
 # Documentation tooling

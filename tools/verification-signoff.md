@@ -273,9 +273,7 @@ These test runs require their respective host OS. The CI workflow includes them 
 | Each locale in FinalOverrideSet has a `calendar:` block in YAML | PASS -- bn, fa, he, ku, ta, zu-ZA |
 | `tools/compare-probes.cs` matches FinalOverrideSet | PASS -- `["bn", "fa", "he", "ku", "ta", "zu-ZA"]` |
 | Probe-shape narrative reconciled | PASS -- documents `month_names_raw` and `month_genitive_names_raw` |
-| Agent-facing locale and net48 guidance corrected | PASS -- `CLAUDE.md` and `AGENTS.md` agree |
 | Release notes, readme, and architecture docs updated | PASS |
-| Locale-authoring skill and parity checklist updated | PASS |
 | Deleted-converter residual scan is scope-based | PASS -- only allowlisted assertions and release-note references remain |
 | `dotnet format --verify-no-changes` | PASS -- 0 of 1596 files formatted |
 | `dotnet test` net10.0 | PASS -- 38,908 tests, 0 failures |
@@ -293,5 +291,4 @@ All local verification gates pass on macOS for both net10.0 (38,908 tests, 0 fai
 ### Follow-up candidates (not gates)
 
 - **R15 -- Source-generator diagnostic for claim-parity**: A build-time diagnostic that enforces "claimed overrides in docs/tools match YAML reality" would catch future drift automatically. Follow-up: new build-time feature with its own test matrix.
-- **R16 -- CI-lint for CLAUDE.md command blocks**: A lint that verifies executable command blocks in CLAUDE.md still work. Follow-up: docs-hygiene.
 - **R18 -- Drift-detection test for compare-probes.cs**: A test that catches future divergence between `tools/compare-probes.cs` claim arrays and YAML reality. Follow-up: fold into R15 work.
